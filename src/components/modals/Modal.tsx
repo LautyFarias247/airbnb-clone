@@ -35,7 +35,7 @@ const Modal: React.FC<Props> = ({
 
   const handleClose = useCallback(() => {
     if (disabled) return;
-	
+
     setShowModal(false);
     setTimeout(() => {
       onClose();
@@ -60,9 +60,9 @@ const Modal: React.FC<Props> = ({
         <div className="relative w-full md:w-4/6 lg:w-3/6 xl:w-2/5 my-6 mx-auto h-full lg:h-auto md:h-auto">
           {/* CONTENT */}
           <div
-            className={` translate duration-300 max-h-screen ${
-              showModal ? "translate-y-0" : "translate-y-full"
-            } ${showModal ? "opacity-100" : "opacity-0"}`}
+            className={` translate duration-300 max-h-screen 
+						${showModal ? "translate-y-0" : "translate-y-full"} 
+						${showModal ? "opacity-100" : "opacity-0"}`}
           >
             <div className="translate h-full lg:h-auto md:h-auto border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
               {/* HEADER */}
@@ -94,13 +94,13 @@ const Modal: React.FC<Props> = ({
                     onClick={handleSubmit}
                   />
                 </div>
-								{footer}
+                {footer}
               </div>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </> 
   );
 };
 
