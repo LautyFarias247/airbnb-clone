@@ -7,6 +7,7 @@ import useRegisterModal from "@/hooks/useRegisterModal";
 import useLoginModal from "@/hooks/useLoginModal";
 import { signOut } from "next-auth/react";
 import { SafeUser } from "@/types";
+import useRentModal from "@/hooks/useRentModal";
 interface Props {
   currentUser?: SafeUser | null;
 }
@@ -14,16 +15,21 @@ interface Props {
 const UserMenu: React.FC<Props> = ({ currentUser }) => {
   const registerModal = useRegisterModal();
   const loginModal = useLoginModal();
+	const rentModal = useRentModal()
   const [isOpen, setIsOpen] = useState(false);
   const toggleOpen = useCallback(() => {
     setIsOpen(!isOpen);
   }, [isOpen]);
 
+  const onRent = useCallback(() => {
+    if (!currentUser) return loginModal.onOpen();
+		rentModal.onOpen()
+	}, [currentUser, loginModal, rentModal]);
   return (
     <div className="relative">
       <div className="flex flex-row items-center gap-3 ">
         <div
-          onClick={() => {}}
+          onClick={onRent}
           className="hidden md:block text-sm font-semibold py-3 px-4 rounded-full hover:bg-neutral-100 transition cursor-pointer"
         >
           Airbnb yout home
@@ -34,7 +40,7 @@ const UserMenu: React.FC<Props> = ({ currentUser }) => {
         >
           <AiOutlineMenu />
           <div className="hidden md:block">
-            <Avatar src={currentUser?.image}/>
+            <Avatar src={currentUser?.image} />
           </div>
         </div>
       </div>
@@ -47,8 +53,13 @@ const UserMenu: React.FC<Props> = ({ currentUser }) => {
                 <MenuItem onClick={() => {}} label="Mis favoritos" />
                 <MenuItem onClick={() => {}} label="Mis reservas" />
                 <MenuItem onClick={() => {}} label="Mi perfil" />
-                <MenuItem onClick={() => {}} label="Poner mi Airbnb" />
-                <MenuItem onClick={() => {signOut()}} label="Cerrar sesión" />
+                <MenuItem onClick={rentModal.onOpen} label="Poner mi Airbnb" />
+                <MenuItem
+                  onClick={() => {
+                    signOut();
+                  }}
+                  label="Cerrar sesión"
+                />
               </>
             ) : (
               <>

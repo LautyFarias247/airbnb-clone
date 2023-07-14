@@ -2,10 +2,18 @@
 import React from "react";
 import Container from "../Container";
 import { TbBeach, TbMountain, TbPool } from "react-icons/tb";
-import { GiWindmill, GiIsland, GiBoatFishing, GiForestCamp, GiCactus, GiCaveEntrance } from "react-icons/gi";
+import {
+  GiWindmill,
+  GiIsland,
+  GiBoatFishing,
+  GiForestCamp,
+  GiCactus,
+  GiCaveEntrance,
+} from "react-icons/gi";
 import { MdOutlineVilla } from "react-icons/md";
-import {BsSnow} from 'react-icons/bs'
-import {IoDiamondOutline} from 'react-icons/io5'
+import { BsSnow } from "react-icons/bs";
+import { IoDiamondOutline } from "react-icons/io5";
+import { FaSkiing } from "react-icons/fa";
 import CategoryBox from "../CategoryBox";
 import { usePathname, useSearchParams } from "next/navigation";
 export const categories = [
@@ -19,8 +27,7 @@ export const categories = [
     icon: GiWindmill,
     description: "Esta propiedad esta cerca de windmills",
   },
-  { label: "Moderno", icon: MdOutlineVilla, description: "Casa moderna" }
-  ,
+  { label: "Moderno", icon: MdOutlineVilla, description: "Casa moderna" },
   // {
   //   label: "En las alturas",
   //   icon: TbMountain,
@@ -48,7 +55,7 @@ export const categories = [
   },
   {
     label: "Esquí",
-    icon: GiBoatFishing,
+    icon: FaSkiing,
     description: "Esta casa esta en lago",
   },
   {
