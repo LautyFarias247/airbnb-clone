@@ -18,7 +18,7 @@ interface Props {
   guestCount: number;
   bathroomCount: number;
   locationValue: string;
-  category: {
+  category?: {
     icon: IconType;
     label: string;
     description: string;
