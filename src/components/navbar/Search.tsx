@@ -32,14 +32,14 @@ const Search = () => {
       if (difference === 0) {
         difference = 1;
       }
-			return `${difference} días`
+			return `${difference} ${difference === 1 ? 'día' : 'días'}`
     }
 		return 'En cualquier fecha'
   }, [startDate, endDate]);
 
   const guestLabel = useMemo(() => {
 		if(guestCount){
-			return `${guestCount} huéspedes`
+			return `${guestCount} ${+guestCount === 1 ? 'huésped' : 'huéspedes'}`
 		}
 		return '¿Cuántos?'
 	}, [guestCount]);
