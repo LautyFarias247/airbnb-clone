@@ -228,7 +228,7 @@ const RentModal = () => {
   }
   return (
     <Modal
-      title="Poné tu Airbnb"
+      title="Pon tu casa en Airbnb"
       isOpen={rentModal.isOpen}
       onClose={rentModal.onClose}
       onSubmit={handleSubmit(onSubmit)}

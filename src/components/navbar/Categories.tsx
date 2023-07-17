@@ -51,32 +51,32 @@ export const categories = [
   {
     label: "Casas de campo",
     icon: GiForestCamp,
-    description: "Esta casa esta en lago",
+    description: "Esta casa esta en el campo",
   },
   {
     label: "Esquí",
     icon: FaSkiing,
-    description: "Esta casa esta en lago",
+    description: "Esta casa esta cerca de pistas de esquí!",
   },
   {
     label: "Ártico",
     icon: BsSnow,
-    description: "Esta casa esta en lago",
+    description: "Esta casa esta en la nieve!",
   },
   {
     label: "Cuevas",
     icon: GiCaveEntrance,
-    description: "Esta casa esta en lago",
+    description: "Esta casa esta una cueva",
   },
   {
     label: "Desierto",
     icon: GiCactus,
-    description: "Esta casa esta en lago",
+    description: "Esta casa esta en el desierto",
   },
   {
     label: "Luxe",
     icon: IoDiamondOutline,
-    description: "Esta casa esta en lago",
+    description: "Esta es una casa de lujo!",
   },
 ];
 
