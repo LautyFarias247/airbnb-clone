@@ -52,7 +52,7 @@ const ListingClient: React.FC<Props> = ({
   const [dateRange, setDateRange] = useState<Range>(initailDateRange);
 
   const onCreateReservation = useCallback(() => {
-    if (!currentUser) return loginModal.onClose;
+    if (!currentUser) return loginModal.onOpen();
 
     setIsLoading(true);
     axios

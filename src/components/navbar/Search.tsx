@@ -41,7 +41,7 @@ const Search = () => {
 		if(guestCount){
 			return `${guestCount} huéspedes`
 		}
-		return '¿Cuántos'
+		return '¿Cuántos?'
 	}, [guestCount]);
   return (
     <div

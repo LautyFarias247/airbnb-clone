@@ -17,8 +17,6 @@ export default async function getListings(
   params: IListingsParams
 ) {
   try {
-		console.log('HOLA PASO');
-		
     const {userId,
 			roomCount, 
       guestCount, 
