@@ -17,8 +17,10 @@ export default async function getListings(
   params: IListingsParams
 ) {
   try {
-    const {
-      roomCount, 
+		console.log('HOLA PASO');
+		
+    const {userId,
+			roomCount, 
       guestCount, 
       bathroomCount, 
       locationValue,
@@ -26,14 +28,15 @@ export default async function getListings(
       endDate,
       category,
     } = params;
-
+		
     let query: any = {};
-
-    // if (userId) {
-    //   query.userId = userId;
-    // }
-
-    if (category) {
+		
+    if (userId) {
+			  query.userId = userId;
+			}
+			
+			console.log('roomcount', roomCount);
+			if (category) {
       query.category = category;
     }
 

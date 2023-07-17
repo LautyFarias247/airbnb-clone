@@ -5,7 +5,7 @@ import Container from "@/components/Container";
 import ListingCard from "@/components/listings/ListingCard";
 import EmptyState from "@/components/EmptyState";
 import ClientOnly from "@/components/ClientOnly";
-
+export const dynamic = "force-dynamic" 
 interface Props {
   searchParams: IListingsParams;
 }
