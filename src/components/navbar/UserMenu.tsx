@@ -16,17 +16,17 @@ interface Props {
 const UserMenu: React.FC<Props> = ({ currentUser }) => {
   const registerModal = useRegisterModal();
   const loginModal = useLoginModal();
-	const rentModal = useRentModal()
-  const router = useRouter()
-	const [isOpen, setIsOpen] = useState(false);
+  const rentModal = useRentModal();
+  const router = useRouter();
+  const [isOpen, setIsOpen] = useState(false);
   const toggleOpen = useCallback(() => {
     setIsOpen(!isOpen);
   }, [isOpen]);
 
   const onRent = useCallback(() => {
     if (!currentUser) return loginModal.onOpen();
-		rentModal.onOpen()
-	}, [currentUser, loginModal, rentModal]);
+    rentModal.onOpen();
+  }, [currentUser, loginModal, rentModal]);
   return (
     <div className="relative">
       <div className="flex flex-row items-center gap-3 ">
@@ -34,7 +34,7 @@ const UserMenu: React.FC<Props> = ({ currentUser }) => {
           onClick={onRent}
           className="hidden md:block text-sm font-semibold py-3 px-4 rounded-full hover:bg-neutral-100 transition cursor-pointer"
         >
-          Airbnb yout home
+          Pon tu casa en Airbnb
         </div>
         <div
           onClick={toggleOpen}
@@ -51,11 +51,26 @@ const UserMenu: React.FC<Props> = ({ currentUser }) => {
           <div className="flex flex-col cursor-pointer ">
             {currentUser ? (
               <>
-                <MenuItem onClick={() => router.push('/trips')} label="Mis viajes" />
-                <MenuItem onClick={() => {}} label="Mis favoritos" />
-                <MenuItem onClick={() => {}} label="Mis reservas" />
-                <MenuItem onClick={() => {}} label="Mi perfil" />
-                <MenuItem onClick={rentModal.onOpen} label="Poner mi Airbnb" />
+                <MenuItem
+                  onClick={() => router.push("/trips")}
+                  label="Viajes"
+                />
+                <MenuItem
+                  onClick={() => router.push("/favorites")}
+                  label="Lista de favoritos"
+                />
+                <MenuItem
+                  onClick={() => router.push("/reservations")}
+                  label="Reservaciones"
+                />
+                <MenuItem
+                  onClick={() => router.push("/properties")}
+                  label="Propiedades"
+                />
+                <MenuItem 
+									onClick={rentModal.onOpen} 
+									label="Poner mi Airbnb" 
+								/>
                 <MenuItem
                   onClick={() => {
                     signOut();

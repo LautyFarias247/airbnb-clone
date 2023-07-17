@@ -21,8 +21,8 @@ const TripsPage = async () => {
 		return (
 			<ClientOnly>
 				<EmptyState
-					title='No se encontraron viajes'
-					subtitle='Parece que todavía no has realizado ningún viaje'
+					title='No tienes ningún viaje reservado... ¡por ahora!'
+					subtitle='Saca las maletas del clóset y comienza a planear tu próxima aventura'
 				/>
 			</ClientOnly>
 		)
