@@ -6,11 +6,11 @@ import ListingCard from "@/components/listings/ListingCard";
 import EmptyState from "@/components/EmptyState";
 import ClientOnly from "@/components/ClientOnly";
 
-interface HomeProps {
+interface Props {
   searchParams: IListingsParams;
 }
 
-const Home = async ({ searchParams }: HomeProps) => {
+const Home = async ({ searchParams }: Props) => {
   const listings = await getListings(searchParams);
   const currentUser = await getCurrentUser();
 
