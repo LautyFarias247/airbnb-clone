@@ -34,9 +34,9 @@ export const categories = [
   //   description: "Casa en el campo",
   // },
   {
-    label: "Piletas",
+    label: "Albercas",
     icon: TbPool,
-    description: "Esta casa tiene alta pileta",
+    description: "Esta casa tiene una alberca!",
   },
   {
     label: "Islas",
