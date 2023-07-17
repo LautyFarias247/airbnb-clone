@@ -25,7 +25,7 @@ export const categories = [
   {
     label: "Molinos",
     icon: GiWindmill,
-    description: "Esta propiedad esta cerca de windmills",
+    description: "Esta propiedad es un molino!",
   },
   { label: "Moderno", icon: MdOutlineVilla, description: "Casa moderna" },
   // {
