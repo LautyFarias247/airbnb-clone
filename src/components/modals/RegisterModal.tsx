@@ -97,12 +97,12 @@ const RegisterModal = () => {
       />
       <div className="text-neutral-500 text-center mt-4 font-light">
         <div className="flex flex-row items-center gap-2 ">
-          <div>YA tenes cuna cuenta capo?</div>
+          <div>¿Ya tienes una cuenta ?</div>
           <div
             onClick={toggle}
             className="text-neutral-800 cursor-pointer hover:underline"
           >
-            login
+            Inicia sesión
           </div>
         </div>
       </div>
